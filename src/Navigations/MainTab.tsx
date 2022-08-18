@@ -17,25 +17,25 @@ const tabs=createBottomTabNavigator();
 const MainTab=()=>{
   
     return(
-        <tabs.Navigator initialRouteName="Home" screenOptions={{headerShown:false, tabBarShowLabel:false,tabBarStyle:{paddingHorizontal:0}}} >
+        <tabs.Navigator initialRouteName="Home" screenOptions={{headerShown:false, tabBarShowLabel:false,tabBarStyle:{paddingHorizontal:0,backgroundColor:'#d9d9d9'}}} >
             <tabs.Screen name="Home" options={{tabBarIcon:({focused})=>(
                 <View style={{justifyContent:'center',alignItems:'center'}}>
                     {focused?
-                    <Ionicons name="home" color={'black'} size={responsiveHeight(2.7)}/>
+                    <Ionicons name="home" color={'#001a33'} size={responsiveHeight(2.7)}/>
                     :
-                    <Ionicons name="home-outline" color={'black'} size={responsiveHeight(2.7)}/>
+                    <Ionicons name="home-outline" color={'#001a33'} size={responsiveHeight(2.7)}/>
                     }
-                    <Text style={{fontSize:focused?responsiveWidth(2.8):responsiveWidth(2.5),fontFamily:focused?'Montserrat-SemiBold':'Montserrat-Medium',color:'black'}}>Home</Text>
+                    <Text style={{fontSize:focused?responsiveWidth(2.8):responsiveWidth(2.5),fontFamily:focused?'Montserrat-SemiBold':'Montserrat-Medium',color:'#001a33'}}>Home</Text>
                 </View>
             )}} component={HomeScreen}/>
             <tabs.Screen name="Chat"  options={{tabBarIcon:({focused})=>(
                 <View style={{justifyContent:'center',alignItems:'center'}}>
                     {focused?
-                    <Ionicons name="chatbubble" color={'black'} size={responsiveHeight(2.7)}/>
+                    <Ionicons name="chatbubble" color={'#001a33'} size={responsiveHeight(2.7)}/>
                     :
-                    <Ionicons name="chatbubble-outline" color={'black'} size={responsiveHeight(2.7)}/>
+                    <Ionicons name="chatbubble-outline" color={'#001a33'} size={responsiveHeight(2.7)}/>
                     }
-                    <Text style={{fontSize:focused?responsiveWidth(2.8):responsiveWidth(2.5),fontFamily:focused?'Montserrat-SemiBold':'Montserrat-Medium',color:'black'}}>Chat</Text>    
+                    <Text style={{fontSize:focused?responsiveWidth(2.8):responsiveWidth(2.5),fontFamily:focused?'Montserrat-SemiBold':'Montserrat-Medium',color:'#001a33'}}>Chat</Text>    
                 </View>
             )}}  component={ChatScreen}/>
             <tabs.Screen name="Sells" options={{tabBarIcon:({focused})=>
@@ -43,9 +43,9 @@ const MainTab=()=>{
                    
                     <View style={style.main}>
                     <View style={style.butt}>
-                        <FontAwesome5 name="plus" color={'black'} size={responsiveHeight(2)}/>
+                        <FontAwesome5 name="plus" color={'#001a33'} size={responsiveHeight(2)}/>
                     </View>
-                    <Text style={{position:'absolute',fontSize:responsiveWidth(3),color:'black'}}>
+                    <Text style={{position:'absolute',fontSize:responsiveWidth(3),color:'#001a33'}}>
                         Sell
                     </Text>
                     </View>
@@ -57,21 +57,21 @@ const MainTab=()=>{
             <tabs.Screen name="Myadd" options={{tabBarIcon:({focused})=>(
                 <View style={{justifyContent:'center',alignItems:'center'}}>
                     {focused?
-                    <Ionicons name="heart" color={'black'} size={responsiveHeight(3)}/>
+                    <Ionicons name="heart" color={'#001a33'} size={responsiveHeight(3)}/>
                     :
-                    <Ionicons name="heart-outline" color={'black'} size={responsiveHeight(3)}/>
+                    <Ionicons name="heart-outline" color={'#001a33'} size={responsiveHeight(3)}/>
                     }
-                    <Text style={{fontSize:focused?responsiveWidth(2.8):responsiveWidth(2.5),fontFamily:focused?'Montserrat-SemiBold':'Montserrat-Medium',color:'black'}}>My Adds</Text>    
+                    <Text style={{fontSize:focused?responsiveWidth(2.8):responsiveWidth(2.5),fontFamily:focused?'Montserrat-SemiBold':'Montserrat-Medium',color:'#001a33'}}>My Adds</Text>    
                 </View>
             )}}  component={MyaddScreen}/>
             <tabs.Screen name="account" options={{tabBarIcon:({focused})=>(
                 <View style={{justifyContent:'center',alignItems:'center'}}>
                     {focused?
-                    <FontAwesome name="user" color={'black'} size={responsiveHeight(2.7)}/>
+                    <FontAwesome name="user" color={'#001a33'} size={responsiveHeight(2.7)}/>
                     :
-                    <FontAwesome name="user-o" color={'black'} size={responsiveHeight(2.7)}/>
+                    <FontAwesome name="user-o" color={'#001a33'} size={responsiveHeight(2.7)}/>
                     }
-                    <Text style={{fontSize:focused?responsiveWidth(2.8):responsiveWidth(2.5),fontFamily:focused?'Montserrat-SemiBold':'Montserrat-Medium',color:'black'}}>Accounts</Text>    
+                    <Text style={{fontSize:focused?responsiveWidth(2.8):responsiveWidth(2.5),fontFamily:focused?'Montserrat-SemiBold':'Montserrat-Medium',color:'#001a33'}}>Accounts</Text>    
                 </View>
             )}}  component={AccountScreen}/>    
         </tabs.Navigator>
@@ -82,7 +82,7 @@ const style=StyleSheet.create({
         alignItems:'center'
     },
     butt:{
-        backgroundColor:'white',
+        backgroundColor:'#d9d9d9',
         height:responsiveWidth(14),
         width:responsiveWidth(14),
         borderRadius:responsiveWidth(7),
@@ -92,6 +92,7 @@ const style=StyleSheet.create({
         borderColor:'blue',
         borderWidth:responsiveWidth(1),
         bottom:responsiveHeight(0.2),
+        
     }
 })
 export default MainTab;
