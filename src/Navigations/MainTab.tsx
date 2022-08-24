@@ -3,9 +3,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { View,Text,TouchableOpacity,StyleSheet } from "react-native";
 import HomeScreen from "../Screens/Home";
 import AccountScreen from "../Screens/AccountScreen";
-import ChatScreen from "../Screens/ChatScreen";
-import MyaddScreen from "../Screens/MyaddScreen";
 import SellsScreen from "../Screens/SellsScreen";
+import ChaNavigation from "./ChatNavigation";
+import MyAddSNavigation from "./MyAddsNavigation";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { responsiveHeight,responsiveWidth } from "../Components/Dimentions";
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -37,7 +37,7 @@ const MainTab=()=>{
                     }
                     <Text style={{fontSize:focused?responsiveWidth(2.8):responsiveWidth(2.5),fontFamily:focused?'Montserrat-SemiBold':'Montserrat-Medium',color:'#001a33'}}>Chat</Text>    
                 </View>
-            )}}  component={ChatScreen}/>
+            )}}  component={ChaNavigation}/>
             <tabs.Screen name="Sells" options={{tabBarIcon:({focused})=>
                 (
                    
@@ -63,7 +63,7 @@ const MainTab=()=>{
                     }
                     <Text style={{fontSize:focused?responsiveWidth(2.8):responsiveWidth(2.5),fontFamily:focused?'Montserrat-SemiBold':'Montserrat-Medium',color:'#001a33'}}>My Adds</Text>    
                 </View>
-            )}}  component={MyaddScreen}/>
+            )}}  component={MyAddSNavigation}/>
             <tabs.Screen name="account" options={{tabBarIcon:({focused})=>(
                 <View style={{justifyContent:'center',alignItems:'center'}}>
                     {focused?
